@@ -5,6 +5,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { CoreModule } from './core/core.module';
 import { HomeModule } from './home/home.module';
+import { ItemsModule } from './items/items.module';
 import { Page404Module } from './page404/page404.module';
 import { SharedModule } from './shared/shared.module';
 
@@ -18,7 +19,8 @@ import { AppComponent } from './app.component';
     SharedModule,
     HomeModule,
     Page404Module,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    ItemsModule
   ],
   declarations: [
     AppComponent
