@@ -1,11 +1,13 @@
-
+<!-- https://angular.io/api/forms/FormGroup -->
 <form class="form form-container" #form="ngForm" (ngSubmit)="process()">
   <div class="form-group">
-    <input type="text" class="form-control" placeholder="Prénom et nom" name="name" [(ngModel)]="newItem.name">
+    <input type="text" class="form-control" placeholder="Prénom et nom" name="name" required [(ngModel)]="newItem.name" #nom="ngModel">
+    <div class="alert alert-danger" *ngIf="nom.invalid">The value {{newItem.name}} is invalid</div>
   </div>
 
   <div class="form-group">
-    <input type="text" class="form-control" placeholder="Réf. ex : 1234"  name="reference" [(ngModel)]="newItem.reference">
+    <input type="text" class="form-control" placeholder="Réf. ex : 1234"  name="reference" [(ngModel)]="newItem.reference" required minlength="4" #ref="ngModel">
+    <div class="alert alert-danger" *ngIf="ref.invalid && ref.touched">The value {{newItem.reference}} is invalid</div>
   </div>
 
   <div class="form-group">
@@ -14,5 +16,5 @@
     </select>
   </div>
 
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button [disabled]="form.valid" type="submit" class="btn btn-primary">Submit</button>
 </form>
