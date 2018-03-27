@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
 import { HomeModule } from './home/home.module';
 import { ItemsModule } from './items/items.module';
@@ -20,7 +21,8 @@ import { AppComponent } from './app.component';
     HomeModule,
     Page404Module,
     NgbModule.forRoot(),
-    ItemsModule
+    ItemsModule,
+    AppRoutingModule,
   ],
   declarations: [
     AppComponent
