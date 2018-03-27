@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Item } from '../../../shared/models/item.model';
+import { State } from '../../../shared/enums/state.enum';
 
 @Component({
   selector: 'app-item',
@@ -8,10 +9,11 @@ import { Item } from '../../../shared/models/item.model';
 })
 export class ItemComponent implements OnInit {
   @Input() item: Item;
+  state = State;
   constructor() { }
 
   ngOnInit() {
-    
+
   }
 
 }
