@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { State } from '../../enums/state.enum';
 import { Item } from '../../models/item.model';
 
@@ -10,6 +10,8 @@ import { Item } from '../../models/item.model';
 export class FormComponent implements OnInit {
   libelles = Object.values(State);
   newItem: Item;
+  @Output() nItem: EventEmitter<Item> = new EventEmitter();
+
   constructor() { }
 
   ngOnInit() {
@@ -22,6 +24,6 @@ export class FormComponent implements OnInit {
   }
 
   process(): void {
-
+    this.nItem.emit(this.newItem);
   }
 }
