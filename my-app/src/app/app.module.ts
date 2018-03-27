@@ -19,10 +19,10 @@ import { AppComponent } from './app.component';
     CoreModule,
     SharedModule,
     HomeModule,
-    Page404Module,
     NgbModule.forRoot(),
     ItemsModule,
     AppRoutingModule,
+    Page404Module,
   ],
   declarations: [
     AppComponent
@@ -30,4 +30,4 @@ import { AppComponent } from './app.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

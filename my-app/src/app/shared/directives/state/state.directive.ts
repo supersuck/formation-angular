@@ -12,7 +12,6 @@ export class StateDirective implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.appState);
     this.stateClass = this.formatClass(this.appState);
   }
 
