@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NavComponent } from './components/nav/nav.component';
+import { FormsModule } from '@angular/forms';
 
 import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 
+import { NavComponent } from './components/nav/nav.component';
 import { RouterModule } from '@angular/router';
 import { StateDirective } from './directives/state/state.directive';
+import { FormComponent } from './components/form/form.component';
 
 
 @NgModule({
@@ -13,14 +15,17 @@ import { StateDirective } from './directives/state/state.directive';
     CommonModule,
     RouterModule,
     NgbCollapseModule,
+    FormsModule
   ],
   declarations: [
     NavComponent,
-    StateDirective
+    StateDirective,
+    FormComponent
   ],
   exports: [
     NavComponent,
-    StateDirective
+    StateDirective,
+    FormComponent,
   ]
 })
 export class SharedModule { }

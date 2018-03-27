@@ -22,7 +22,7 @@ const appRoutes: Routes = [
       appRoutes,
       {
         enableTracing: true, // <-- debugging purposes only
-        preloadingStrategy: PreloadAllModules
+        preloadingStrategy: PreloadAllModules // https://angular.io/guide/router
       }
     )
     // other imports here

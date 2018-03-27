@@ -1,0 +1,18 @@
+
+<form class="form form-container" #form="ngForm" (ngSubmit)="process()">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Prénom et nom" name="name" [(ngModel)]="newItem.name">
+  </div>
+
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Réf. ex : 1234"  name="reference" [(ngModel)]="newItem.reference">
+  </div>
+
+  <div class="form-group">
+    <select class="form-control" name="select" [(ngModel)]="newItem.state">
+      <option *ngFor="let libelle of libelles" [ngValue]="libelle">{{libelle}}</option>
+    </select>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

@@ -4,6 +4,7 @@ import { ListItemsComponent } from './containers/list-items/list-items.component
 import { ItemComponent } from './componants/item/item.component';
 import { SharedModule } from '../shared/shared.module';
 import { ItemsRoutingModule } from './items-routing.module';
+import { AddItemComponent } from './containers/add-item/add-item.component';
 
 @NgModule({
   imports: [
@@ -14,6 +15,7 @@ import { ItemsRoutingModule } from './items-routing.module';
   declarations: [
     ListItemsComponent,
     ItemComponent,
+    AddItemComponent,
   ],
   exports: [
     ListItemsComponent
