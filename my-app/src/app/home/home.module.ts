@@ -14,7 +14,6 @@ import { environment } from '../../environments/environment';
     HomeComponent
   ],
   exports: [
-    HomeComponent
   ]
 })
 export class HomeModule {
