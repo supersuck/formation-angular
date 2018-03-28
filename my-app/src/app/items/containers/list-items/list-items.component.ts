@@ -15,7 +15,10 @@ export class ListItemsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.collection = this.collectionService.collection;
+    this.collectionService.collection$.subscribe((data) => {
+      console.log(data);
+      this.collection = data;
+    });
   }
 
 }
