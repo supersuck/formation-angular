@@ -27,7 +27,6 @@ const appRoutes: Routes = [
     )
     // other imports here
   ],
-  declarations: [],
   exports: [
     RouterModule,
   ]

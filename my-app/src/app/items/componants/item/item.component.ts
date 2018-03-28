@@ -16,4 +16,8 @@ export class ItemComponent implements OnInit {
 
   }
 
+  changeState(state: State): void {
+    this.item.state = state;
+    // update the DB using collectionService
+  }
 }
