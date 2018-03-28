@@ -44,6 +44,8 @@ export class FormComponent implements OnInit {
 
   process(): void {
     this.nItem.emit(this.form.value);
+    this.form.reset();
+    this.form.get('state').setValue(State.ALIVRER);
   }
 
   hasError(inputName: string): boolean {

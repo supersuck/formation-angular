@@ -34,8 +34,26 @@ export class CollectionService {
   }
 
   // add Item
+  addItem(item: Item): void {
+    item.id = this.afs.createId();
+    this.itemsCollection.doc(item.id).set(item)
+      .catch(error => console.log(error));
+  }
+
+  getItem(id: string): Observable<Item> {
+    const item = this.afs.doc<Item>(`collection/${id}`).valueChanges();
+    return item;
+  }
 
   // update Item
+  update(item: Item): void {
+    this.itemsCollection.doc(item.id).update(item)
+      .catch(error => console.log(error));
+  }
 
   // delete Item
+  delete(item: Item): void {
+    this.itemsCollection.doc(item.id).delete()
+      .catch(error => console.log(error));
+  }
 }
