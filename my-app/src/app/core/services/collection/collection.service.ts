@@ -3,12 +3,16 @@ import { Item } from '../../../shared/models/item.model';
 import { COLLECTION } from '../collection';
 import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
-import { HttpClient } from 'selenium-webdriver/http';
+// import { Subject } from 'rxjs/Subject';
+// import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 @Injectable()
 export class CollectionService {
   itemsCollection: AngularFirestoreCollection<Item>;
   private _collection$: Observable<Item[]>;
+  // Seul Flux Observable :
+  // private _collection$: Subject<Item[]> = new Subject<Item[]>();
+  // private _collection$: BehaviorSubject<Item[]> = new BehaviorSubject<Item[]>();
 
   constructor(
     private afs: AngularFirestore,
