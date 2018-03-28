@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -15,7 +15,7 @@ import { FormComponent } from './components/form/form.component';
     CommonModule,
     RouterModule,
     NgbCollapseModule,
-    FormsModule
+    ReactiveFormsModule
   ],
   declarations: [
     NavComponent,

@@ -9,6 +9,7 @@ import { HomeModule } from './home/home.module';
 import { Page404Module } from './page404/page404.module';
 import { SharedModule } from './shared/shared.module';
 
+import { CollectionService } from './core/services/collection/collection.service';
 
 import { AppComponent } from './app.component';
 
@@ -25,7 +26,9 @@ import { AppComponent } from './app.component';
   declarations: [
     AppComponent
   ],
-  providers: [],
+  providers: [
+    CollectionService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
