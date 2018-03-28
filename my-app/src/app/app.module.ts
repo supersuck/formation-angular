@@ -11,6 +11,7 @@ import { Page404Module } from './page404/page404.module';
 import { SharedModule } from './shared/shared.module';
 
 import { CollectionService } from './core/services/collection/collection.service';
+import { EditResolverService } from './core/services/edit-resolver/edit-resolver.service';
 
 import { AppComponent } from './app.component';
 import { AngularFireModule } from 'angularfire2';
@@ -33,7 +34,8 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
     AppComponent
   ],
   providers: [
-    CollectionService
+    CollectionService,
+    EditResolverService
   ],
   bootstrap: [AppComponent]
 })

@@ -9,5 +9,7 @@
     <button class="btn btn-primary" *ngIf="item.state === state.ALIVRER" (click)="changeState(state.ENCOURS)">{{ state.ENCOURS }}</button>
 
     <button class="btn btn-primary" *ngIf="item.state === state.ENCOURS" (click)="changeState(state.LIVREE)">{{ state.LIVREE }}</button>
+
+    <a class="btn btn-danger" [routerLink]="['/items/edit/', item.id]">Modifier</a>
   </div>
 </div>

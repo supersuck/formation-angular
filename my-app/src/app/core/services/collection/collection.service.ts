@@ -56,4 +56,8 @@ export class CollectionService {
     this.itemsCollection.doc(item.id).delete()
       .catch(error => console.log(error));
   }
+
+  // récupérer id passé dans lurl via le router
+  // après avoir récupéré les données grace à méthode getItem de ce service
+  // envoyer les données à formComponent
 }
